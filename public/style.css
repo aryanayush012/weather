@@ -1,0 +1,230 @@
+
+body{
+    background-image: url(background.jpg);
+  }
+  
+  body {
+    font-family: "Montserrat";
+    text-align: center;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat-Bold";
+  }
+  
+  p {
+    color: #fff;
+  }
+  
+  /* Headings */
+  
+  .big-heading {
+    font-family: "Montserrat-Black";
+    font-size: 3.5rem;
+    line-height: 1.5;
+  }
+  
+  .section-heading {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  
+  /* Containers */
+  
+  .container-fluid{
+    padding: 7% 15%;
+  }
+  
+  /* Sections */
+  
+  /* .colored-section {
+    background-color: #ff4c68;
+    color: #fff;
+  /* } */
+  
+  /* .white-section {
+    background-color: #fff;
+  } */
+  
+  /* Navigation Bar */
+  
+  .navbar {
+    padding: 0 0 4.5rem;
+  }
+  
+  .navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-item {
+    padding: 0 18px;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    font-family: "Montserrat-Light";
+  }
+  
+  
+  /* Title Section */
+  
+  #title {
+    color: #fff;
+    text-align: left;
+  }
+  
+  #title .container-fluid {
+    padding: 2% 15% 7%;
+  }
+  
+  /* Title Image */
+  
+  .title-image {
+    width: 60%;
+    transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
+  }
+  
+  /* Features Section */
+  
+  #features {
+    position: relative;
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
+  }
+  
+  .feature-box {
+    padding: 4.5%;
+  }
+  
+  .icon {
+    color: #ef8172;
+    margin-bottom: 1rem;
+  }
+  
+  .icon:hover {
+    color: #ff4c68;
+  }
+  
+  /* Testimonial Section */
+  
+  #testimonials {
+    background-color: #ef8172;
+  }
+  
+  .testimonial-text {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  
+  .testimonial-image {
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+  }
+  
+  
+  #press {
+    background-color: #ef8172;
+    padding-bottom: 3%;
+  }
+  
+  .press-logo {
+    width: 15%;
+    margin: 20px 20px 50px;
+  }
+  
+  /* Pricing Section */
+  
+  #pricing {
+    padding: 100px;
+  }
+  
+  .price-text {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  
+  .pricing-column {
+    padding: 3% 2%;
+  }
+  
+  /* CTA Section */
+  
+  
+  /* Footer Section */
+  
+  
+  .social-icon {
+    margin: 20px 10px;
+  }
+  
+  @media (max-width: 1028px) {
+  
+    #title {
+      text-align: center;
+    }
+  
+    .title-image {
+      position: static;
+      transform: rotate(0);
+    }
+  }
+  
+  
+  .white{
+    background-color: black;
+    opacity: 0.2;
+    
+  }
+  
+  
+  
+  body {
+    color: #fff;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #CFD8DC;
+    background-repeat: no-repeat;
+  }
+  
+  .card {
+    background-image: url("https://i.imgur.com/dpqZJV5.jpg");
+    background-size: cover;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 4px #9E9E9E;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .time-font {
+    font-size: 50px;
+  }
+  
+  .sm-font {
+    font-size: 18px;
+  }
+  
+  .med-font {
+    font-size: 28px;
+  }
+  
+  .large-font {
+    font-size: 60px;
+  }
+  
+  .form-control{
+    background-color: #9E9E9E;
+    color: black;
+  }
+
+.mb-0{
+    color: #fff;
+}

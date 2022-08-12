@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>weather Cock</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v6.1.2/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="">Weather Cock</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#title">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Footer">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Features">Features</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+
+
+      <!-- Title -->
+
+      <div class="row">
+
+        <div class="col-lg-6">
+          <h1 class="big-heading">A beautiful experience of the weather report</h1>
+          <br>
+          <form action="/" method="post">
+            <select name="state" id="state" class="form-control">
+              <option name="state" value="Andhra Pradesh">Andhra Pradesh</option>
+              <option name="state" value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+              <option name="state" value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option name="state" value="Assam">Assam</option>
+              <option name="state" value="Bihar">Bihar</option>
+              <option name="state" value="Chandigarh">Chandigarh</option>
+              <option name="state" value="Chhattisgarh">Chhattisgarh</option>
+              <option name="state" value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+              <option name="state" value="Daman and Diu">Daman and Diu</option>
+              <option name="state" value="Delhi">Delhi</option>
+              <option name="state" value="Lakshadweep">Lakshadweep</option>
+              <option name="state" value="Puducherry">Puducherry</option>
+              <option name="state" value="Goa">Goa</option>
+              <option name="state" value="Gujarat">Gujarat</option>
+              <option name="state" value="Haryana">Haryana</option>
+              <option name="state" value="Himachal Pradesh">Himachal Pradesh</option>
+              <option name="state" value="Jammu and Kashmir">Jammu and Kashmir</option>
+              <option name="state" value="Jharkhand">Jharkhand</option>
+              <option name="state" value="Karnataka">Karnataka</option>
+              <option name="state" value="Kerala">Kerala</option>
+              <option name="state" value="Madhya Pradesh">Madhya Pradesh</option>
+              <option name="state" value="Maharashtra">Maharashtra</option>
+              <option name="state" value="Manipur">Manipur</option>
+              <option name="state" value="Meghalaya">Meghalaya</option>
+              <option name="state" value="Mizoram">Mizoram</option>
+              <option name="state" value="Nagaland">Nagaland</option>
+              <option name="state" value="Odisha">Odisha</option>
+              <option name="state" value="Punjab">Punjab</option>
+              <option name="state" value="Rajasthan">Rajasthan</option>
+              <option name="state" value="Sikkim">Sikkim</option>
+              <option name="state" value="Tamil Nadu">Tamil Nadu</option>
+              <option name="state" value="Telangana">Telangana</option>
+              <option name="state" value="Tripura">Tripura</option>
+              <option name="state" value="Uttar Pradesh">Uttar Pradesh</option>
+              <option name="state" value="Uttarakhand">Uttarakhand</option>
+              <option name="state" value="West Bengal">West Bengal</option>
+            </select>
+            <br>
+            <div class="input-group">
+
+              <input type="search" name="search" class="form-control" placeholder="Search" />
+              <!-- <label class="form-label" for="form1">Search</label> -->
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <% if(temp) {%>
+          <div class="col-lg-6">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-10 col-lg-8 col-xl-6">
+                  <div class="card bg-dark text-white" style="border-radius: 40px;">
+                    <div class="bg-image" style="border-radius: 35px;">
+
+                      <div class="mask" style="background-color: rgba(190, 216, 232, .5);"></div>
+                    </div>
+                    <div class="card-img-overlay text-dark p-5">
+                      <h4 class="mb-0">
+                        <%=city %>, <%= state %>, IN
+                      </h4>
+                      <% if(temp) { %>
+                        <p class="display-2 my-3">
+                          <%=temp%> °C
+                        </p>
+                        <% } %>
+                          <% if(humidity) { %>
+                            <p class="mb-2">Humidity: <strong>
+                                <%=humidity %> %
+                              </strong></p>
+                            <% } %>
+                              <% if(description){ %>
+                                <p> Current Status: <strong>
+                                    <%= description %>
+                                  </strong></p>
+                                <% } %>
+                                  <% if(feels_like){ %>
+                                    <p> feels_like: <strong>
+                                        <%= feels_like %> °C
+                                      </strong></p>
+                                    <% } %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <% } %>
+
+    </div>
+
+  </section>
+
+
+  <!-- Features -->
+
+  <section class="white-section" id="Features">
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-solid fa-location-dot fa-4x"></i>
+          <h3 class="feature-title">Your Location</h3>
+          <p>Just enter the location of the place <br>
+            namely the name of the place of <br>
+            which you want to fetch your weather</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-solid fa-loader fa-4x"></i>
+          <h3 class="feature-title">Search your Result</h3>
+          <p>This website will fetch the current weather report <br>
+            and tells you the Current temperature,Current weather <br>
+            Current Humidity and Current wind speed</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-heart fa-4x"></i>
+          <h3 class="feature-title">Plan Accordingly</h3>
+          <p>On the basis of the above stats you can <br>
+            plan your next move accordingly.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Footer -->
+
+  <footer class="white" id="Footer">
+    <div class="container-fluid">
+      <a href="https://www.facebook.com/ayush.aryan.90834"><i class="social-icon fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/AyushAr55044498"><i class="social-icon fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/_ayush__aryan_"><i class="social-icon fab fa-instagram"></i></a>
+      <a href="mailto:aryanayush012@gmail.com"><i class="social-icon fas fa-envelope"></i></a>
+
+      <p>© Made with ❤️ by Ayush</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
