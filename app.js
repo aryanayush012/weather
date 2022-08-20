@@ -1,6 +1,9 @@
 const express=require("express");
 const bodyParser = require("body-parser");
 const request=require("request");
+require("dotenv").config();
+const api_key = process.env.API_KEY;
+
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -11,6 +14,7 @@ var city="";
 var feels_like="";
 var state="";
 var description="";
+
 
 app.get("/",function(req,res){
      res.render("index",{temp:temp,humidity:humidity,city:city,state:state,description:description,feels_like:feels_like});
@@ -57,7 +61,7 @@ else if(state === "Dadra & Nagar Haveli and Daman & Diu"){state = "DNHDD";}
 else if(state === "Ladakh"){state = "LA";}
 else {state = "OT";}
 console.log(state);
-    const uri="http://api.openweathermap.org/geo/1.0/direct?q="+city+","+state+",IND&limit=&appid=8478b3a67430f326d1e0c3a266da80ca";
+    const uri="http://api.openweathermap.org/geo/1.0/direct?q="+city+","+state+",IND&limit=&appid="+api_key;
 
     var options = {
          url:uri
@@ -79,7 +83,7 @@ request(options,function(err,response,body){
         // console.log(r[0].lon);
          console.log(r);
         
-        const uri="https://api.openweathermap.org/data/2.5/weather?lat="+r[0].lat+"&lon="+r[0].lon+"&appid=8478b3a67430f326d1e0c3a266da80ca"
+        const uri="https://api.openweathermap.org/data/2.5/weather?lat="+r[0].lat+"&lon="+r[0].lon+"&appid="+api_key;
         var option2 = {
             
             url:uri
