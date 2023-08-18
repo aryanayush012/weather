@@ -131,8 +131,7 @@ app.post("/", function (req, res) {
         r[0].lat +
         "&lon=" +
         r[0].lon +
-        "&appid=" +
-        api_key;
+        "&appid=8478b3a67430f326d1e0c3a266da80ca";
       var option2 = {
         url: uri,
       };
